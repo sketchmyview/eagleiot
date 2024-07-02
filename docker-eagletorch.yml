@@ -1,0 +1,16 @@
+---
+version: '2'
+services:
+  eagletorch:
+    image: sketchmyview/eagletorch:latest
+    hostname: eagletorch
+    container_name: eagletorch
+    ports:
+      - "8080:8080"
+    environment:
+      PORT: 8080
+      CLIENT_ID: 'eagleiot'
+      DB_USER: 'admin'
+      DB_PASSWORD: 'admin'
+      
+      

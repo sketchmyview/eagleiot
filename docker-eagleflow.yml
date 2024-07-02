@@ -1,0 +1,10 @@
+---
+version: '2'
+services:
+  eagleflow:
+    image: sketchmyview/eagleflow
+    hostname: eagleflow
+    container_name: eagleflow
+
+      
+      
