@@ -1,0 +1,15 @@
+---
+version: '2'
+services:
+  questdb:
+    image: questdb/questdb
+    hostname: questdb
+    container_name: questdb
+    ports:
+      - "8812:8812"
+      - "9000:9000"
+      - "9003:9003"
+      - "9009:9009"
+
+      
+      
