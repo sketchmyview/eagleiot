@@ -1,6 +1,6 @@
 # Starter IoT docker compose files
 
-### eagletorch is a custom Node-RED docker image that comes with pre-built sqlite database and a default admin user. There are other docker compose files that can be run to setup full IoT real time analytics.
+### eagletorch is a custom Node-RED docker image that comes with pre-built authentication using sqlite database and a default admin user. There are other docker compose files that can be run to setup full IoT real time analytics.
 
 * docker-compose -f docker-eagletorch.yml up -d
 
@@ -9,6 +9,8 @@ This starts a docker container with eagletorch and ready for data extraction fro
 Url: http://localhost:8080/thing/
 
 Credentials: admin/admin (default or supplied during container creation)
+
+Login to the docker container and install ssl using apt install openssl
 
 ![image info](./images/eagletorch-login.png)
 
@@ -32,7 +34,9 @@ Make sure to install questdb plugin and import a sample dashboard from \grafana\
 
 ![image info](./images/grafana.png)
 
-* docker-compose -f docker-eagleflow.yml up -d
+* docker-compose -f docker-eagleflow.yml up -d 
+
+This docker compose file assumes all the previous docker containers are present.
 
 This starts an instance of eagleflow, consume messages from MQTT broker and can be saved to questdb (default configuration) or published to Kafka instance or Azure IoT hub. Login to the eagleflow docker container and apply all the necessary configurations to layout.toml file. 
 
