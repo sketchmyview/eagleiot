@@ -43,6 +43,8 @@ This starts an instance of eagleflow, consume messages from MQTT broker and can 
 Default MQTT setup receives connection without SSL, however layout.toml has configurations to accept MQTT connections on SSL.
 
 
+![image info](./images/iothub-messages.png)
+
 ### Further reference architecture for Edge and Cloud Analytics
 
 ![image info](./images/eagletorch-1.png)
