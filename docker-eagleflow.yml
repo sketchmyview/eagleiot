@@ -5,6 +5,8 @@ services:
     image: sketchmyview/eagleflow
     hostname: eagleflow
     container_name: eagleflow
+    environment:
+      CONNECTION_STRING: "" #iothub connecting string
 
       
       
